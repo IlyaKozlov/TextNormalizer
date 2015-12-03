@@ -9,7 +9,7 @@ import ru.ispras.textnormalization.wordbased.{IdentityWordsNormalizer, AbstractW
   */
 class NgramsBuilder extends Builder{
     protected def getStringNormalizer = {
-        new CompositionNormalizer( Array(new Lowercase(), new NumReplace(), new HttpReplace()))
+        new CompositionNormalizer(Array(new Lowercase(), new NumReplace(), new HttpReplace()))
     }
 
     protected def getTokenizer: AbstractTokenizer = new PunctuationTokenizer()
